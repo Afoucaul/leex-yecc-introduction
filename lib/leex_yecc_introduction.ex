@@ -1,20 +1,20 @@
 defmodule LeexYeccIntroduction do
-  # def parse(input) do
-  #   with {:ok, tokens, _} <- :lexer.string(input)
-  #        {:ok, result}    <- :parser.parse(tokens)
-  #   do
-  #     result
-  #   else
-  #     {:error, reason, _} ->
-  #       reason
-  #     {:error, {_, :parser, reason}} ->
-  #       to_string(reason)
-  #   end
-  # end
+  def parse(input) do
+    with {:ok, tokens, _} <- :lexer.string(input),
+         {:ok, result}    <- :parser.parse(tokens)
+    do
+      result
+    else
+      {:error, reason, _} ->
+        reason
+      {:error, {_, :parser, reason}} ->
+        to_string(reason)
+    end
+  end
 
   def display_tree(roots, prefix \\ "")
 
-  def display_tree([], prefix), do: nil
+  def display_tree([], _prefix), do: nil
 
   def display_tree({name, attributes, children}, _prefix) do
     IO.puts("#{name} #{inspect attributes}")
