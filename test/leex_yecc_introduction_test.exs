@@ -2,30 +2,27 @@ defmodule LeexYeccIntroductionTest do
   use ExUnit.Case
   import LeexYeccIntroduction
 
-  #@tag :skip
-  #test "simple orphan tag" do
-  #  input = "<a/>"
-  #  assert parse(input) == {"a", %{}, []}
-  #end
+  test "simple orphan tag" do
+    input = "<a/>"
+    assert parse(input) == {"a", %{}, []}
+  end
 
-  #@tag :skip
-  #test "simple tag pair" do
-  #  input = "<a></a>"
-  #  assert parse(input) == {"a", %{}, []}
-  #end
+  test "simple tag pair" do
+    input = "<a></a>"
+    assert parse(input) == {"a", %{}, []}
+  end
 
-  #@tag :skip
-  #test "orphan tag with attributes" do
-  #  input = ~S(<a foo="12" bar="27" />)
-  #  assert parse(input) == {"a", %{foo: 12, bar: 27}, []}
-  #end
+  test "orphan tag with attributes" do
+    input = ~S(<a foo="12" bar="27" />)
+    assert parse(input) == {"a", %{foo: 12, bar: 27}, []}
+  end
 
-  #@tag :skip
-  #test "two-level tree structure" do
-  #  input = ~S(<a><b /></a>)
-  #  assert parse(input) == {"a", %{}, [{"b", %{}, []}]}
-  #end
+  test "two-level tree structure" do
+    input = ~S(<a><b /></a>)
+    assert parse(input) == {"a", %{}, [{"b", %{}, []}]}
+  end
 
+  @tag :skip
   test "display tree" do
       {
         "a", %{}, 
@@ -38,7 +35,7 @@ defmodule LeexYeccIntroductionTest do
             ]
           }, 
           {"f", %{}, []},
-          {"g", %{}, []}
+          {"", %{}, []}
         ]
       }
     |> display_tree
