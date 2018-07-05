@@ -6,7 +6,7 @@ STRING="[^"]*"
 
 Rules.
 
-{\s+} : skip_token.
+\s+ : skip_token.
 = : {token, {equals, TokenLine}}.
 < : {token, {open, TokenLine}}.
 > : {token, {close, TokenLine}}.
