@@ -1,6 +1,6 @@
 defmodule LeexYeccIntroduction do
   def parse(input) do
-    with {:ok, tokens, _} <- :lexer.string(input),
+    with {:ok, tokens, _} <- input |> to_char_list |> :lexer.string,
          {:ok, result}    <- :parser.parse(tokens)
     do
       result
