@@ -6,7 +6,7 @@ tree ->
     tag : '$1'.
 
 tags ->
-    tag : '$1'.
+    tag : ['$1'].
 tags ->
     tags tag : ['$1' | '$2'].
 
