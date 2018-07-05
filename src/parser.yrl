@@ -8,7 +8,7 @@ tree ->
 tags ->
     tag : '$1'.
 tags ->
-    tag tags : ['$1' | '$2'].
+    tags tag : ['$1' | '$2'].
 
 tag ->
     orphan_tag : '$1'.
@@ -36,7 +36,7 @@ closing_tag ->
 attributes ->
     attribute : '$1'.
 attributes ->
-    attribute attributes : maps:merge('$1', '$2').
+    attributes attribute : maps:merge('$1', '$2').
 
 attribute ->
     identifier : #{v('$1') => nil}.
