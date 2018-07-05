@@ -1,19 +1,5 @@
-# LeexYeccNtroduction
+# Introduction to parsing with Leex and Yecc
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `leex_yecc_ntroduction` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:leex_yecc_ntroduction, "~> 0.1.0"}]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/leex_yecc_ntroduction](https://hexdocs.pm/leex_yecc_ntroduction).
-
+Clone this project, and checkout to the tag `skeleton`.
+Try to fill the `lexer.xrl` and `parser.yrl` files.
+Once you're done, checkout the `working` tag to access to the full code.
